@@ -139,3 +139,6 @@ LOGIN_URL = '/login'
 MEDIA_URL = '/videos/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'videos')
 
+if 'DATABASE_URL' in os.environ:
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config()}
