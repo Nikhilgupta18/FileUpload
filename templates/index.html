@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+ <div class="container">
+        <h1>This is index page.</h1>
+
+        <ul>
+            {% for item in files %}
+
+            <li>
+                {{ item.description }}
+             <video width='400' controls>
+                <source src="{{ item.video.url }}" type='video/mp4'>
+                Your browser does not support the video tag.
+                </video>
+            </li>
+
+
+            {% endfor %}
+        </ul>
+    </div>
+
+
+
+{% endblock %}
