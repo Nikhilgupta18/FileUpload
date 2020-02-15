@@ -1,1 +1,1 @@
-web: gunicorn fileuploadtask.wsgi
+web: gunicorn uploadfiletask.wsgi
